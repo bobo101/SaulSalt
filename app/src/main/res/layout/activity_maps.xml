@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+         android:layout_height="match_parent"
+    android:layout_width="match_parent" >
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.fontech.saulsalt.MapsActivity"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        android:id="@+id/TopLayout"
+        android:animateLayoutChanges="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="經度"
+            android:id="@+id/textView"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1.2"
+            android:layout_gravity="center_vertical" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:id="@+id/LongitudeText"
+            android:layout_weight="1.1"
+            android:background="#FFFFFF"
+            android:layout_gravity="center_vertical"
+            android:digits="0123456789.-"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="緯度"
+            android:id="@+id/textView2"
+            android:textColor="#FFFFFF"
+            android:layout_weight="1.2"
+            android:layout_marginLeft="7dp"
+            android:layout_gravity="center_vertical" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:id="@+id/LatitudeText"
+            android:layout_weight="1.1"
+            android:background="#FFFFFF"
+            android:layout_gravity="center_vertical"
+            android:digits="0123456789.-"
+            android:inputType="numberDecimal" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:text="Search"
+            android:id="@+id/SearchButton"
+            android:layout_weight="1"
+            android:layout_marginLeft="7dp"
+            android:background="#FF5722"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="7dp" />
+    </LinearLayout>
+
+</RelativeLayout>
